@@ -1,14 +1,19 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int a;
-    cin>>a;
-    bool perfect = (a==6)||(a==28)||(a==496)||(a==8128)||(a==33550336);
-    if (perfect) {
-        cout << ("True");
+    int a,b,c;
+    cin>>a>>b>>c;
+    if(a>b && b>c or b>a && b<c) {
+        cout<<b;
+    }
+    else if(a>c && c>b or c<a && b>c) {
+        cout<<c;
+    }
+    else if(b>a && a>c or a>b && c>a) {
+        cout<<a;
     }
     else {
-        cout<<("False");
+        cout<<"Error";
     }
     return 0;
 }
